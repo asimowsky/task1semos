@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ulty names <%= data.title %></title>
+</head>
+<body>
+    <h1>Add new faculty</h1>
+    <div style="background-color: blueviolet; display: flex; justify-content: center;">
+    <form method="POST" action="/post/edit/<%= data._id %>">
+        <label for="faculty_name">Faculty Title</label>
+        <input type="text" id="faculty_name" name="title" value="<%= data.title %>" placeholder="faculty_name" required>
+        <br><br>
+        <label for="faculty_desc">Faculty desc</label>
+        <textarea name="content" id="faculty_desc" cols="30" rows="10" placeholder="faculty_desc" required>
+            <%= data.content %>
+        </textarea>
+        <label for="faculty_desc">Faculty desc</label>
+        <textarea name="parts" id="faculty_desc" cols="30" rows="10" placeholder="faculty_desc" required>
+            <%= data.parts %>
+        </textarea>
+        <br><br>
+        <button type="submit">Update Faculty</button>
+    </form>
+    </div>
+
+</body>
+</html>

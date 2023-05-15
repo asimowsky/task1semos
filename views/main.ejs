@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semos University</title>
+</head>
+<body>
+    <header>
+     
+        <a href="/faculty_add" style="padding: 5; background-color: green; color: white;">Add new faculty</a>
+    </header>
+    <% data.forEach(post => { %>
+        <div style="background-color: blue; display: flex; justify-content: center; color: white; align-items: center; flex-direction: column;">
+            <h2><%= post.title %></h2>
+            <div><%= post.content %></div>
+            <div><%= post.parts %></div>
+            <br>
+       
+            <a style="color:aliceblue" href="/faculty_edit/<%=post._id%>">Edit Informations</a>
+            <a href="/post/delete/<%=post._id%>">Delete Informations</a>
+        </div>
+        <br>
+        <hr>
+    <% }) %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Faculties</title>
+</head>
+<body>
+    <h1>Add new faculty</h1>
+  <div style="background-color: blueviolet; display: flex; justify-content: center;">
+    <form method="POST" action="/post/add">
+        <label for="faculty_name">University Name</label>
+        <input type="text" id="faculty_name" name="title" placeholder="Faculty Name" required>
+        <br><br>
+        <label for="faculty_desc">University Address</label>
+        <textarea name="content" id="faculty_desc" cols="30" rows="10" placeholder="faculty desc" required></textarea>
+        <br><br>
+        <label for="faculty_parts">Parts</label>
+        <textarea name="parts" id="faculty_parts" cols="30" rows="10" placeholder="faculty parts" required></textarea>
+       
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
